@@ -34,25 +34,8 @@ app.get('/help',(req,res)=>{
 
 app.get('/about',(req,res)=>{
     res.render('about',{
-        title:"Header title"
+        title:"About "
     })
-})
-
-app.get('/products', (req,res) =>{
-    
-    if(!req.query.search)
-    {
-       return res.send({
-        error: 'You must providde a search term'
-       })
-    }
-    
-    console.log(req.query)
-    res.send(
-        {
-            products: []
-        }
-    )
 })
 
 app.get('/weather',(req,res)=>{

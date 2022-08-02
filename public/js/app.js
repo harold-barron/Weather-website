@@ -2,7 +2,9 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const paragraph = document.querySelector('#paragraph')
 const message1 = document.querySelector('#message-1')
+const message1_1 = document.querySelector('#message-1_1')
 const message2 = document.querySelector('#message-2')
+const message3 = document.querySelector('#message-3')
 
 
 
@@ -26,10 +28,13 @@ weatherForm.addEventListener('submit',(e)=>{
         else{
             console.log(data)
             // paragraph.textContent = 'Local time '+ data.time
-            message1.textContent = 'The weather in ' + data.address 
-            message2.textContent = data.temperature
+            message1.textContent = `Weather in ${data.address}:`
+            message1_1.textContent = `Localtime ${data.time}`
+            message2.textContent = `${data.weather} with a temperature of ${data.temperature}`
+            message3.textContent = `Real sensation ${data.feelslike}`
         }
     })
         })
 
 })
+
