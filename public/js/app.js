@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit',(e)=>{
         }
         else{
             console.log(data)
-            paragraph.textContent = 'Local time '+ data.time
+            // paragraph.textContent = 'Local time '+ data.time
             message1.textContent = 'The weather in ' + data.address 
             message2.textContent = data.temperature
         }
